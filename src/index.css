@@ -1,0 +1,144 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper{
+  position: relative;
+  height: 100vh;
+}
+.flash{
+  font-size: 35px;
+}
+.card{
+  width: 350px;
+  height: 300px;
+  margin-bottom: 20px;
+  perspective: 500px;
+}
+.card:hover > .oneCard{
+  transform: rotateY(180deg);
+}
+.oneCard{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.2s;
+  box-shadow:2px 6px 11px 0px #00000042;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.frontSide,.backSide{
+  width: 100%;
+  display: flex;
+  font: 500;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.frontSide{
+
+
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.backSide{
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-end;
+  background-color: aquamarine;
+  transform: rotateY(180deg);
+  line-height: 1.2;
+  font-size: 16px;
+  background-color: white;
+  padding:2rem 10px ;
+  gap: 4rem;
+}
+.cancelBtn button{
+  background-color: beige;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+}
+.icons{
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.mybutton button{
+  background-color: purple;
+  border: none;
+  color: white;
+  font-size: 17px;
+  padding: 0.7rem 2.5rem;
+  border-radius:22px;
+  cursor: pointer;
+}
+
+.heading,.allCards{
+  padding: 1rem 3rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+.heading{
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background-color: white;
+  box-shadow:2px 6px 11px 0px #00000042;
+}
+a{
+  text-decoration: none;
+}
+.allCards,.myForm{
+  padding-top: 8rem;
+}
+.myForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  padding: 20px;
+  transition: all 0.8s;
+  padding-top: 10rem;
+}
+.myform{
+  background-color: #eee;
+  width: 35%;
+  padding: 25px;
+  border-radius: 10px;
+}
+.myForm_display{
+  width: 400px;
+  z-index: 999;
+  opacity: 1;
+}
+.myform_title{
+  margin-bottom: 20px;
+}
+.myForm p{
+  font-size: 25px;
+  font-weight: 300;
+}
+.myform_buttons{
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
+}
+.myForm input,.myForm textarea{
+padding: 10px 7px;
+width: 100%;
+margin-bottom: 20px;
+}
+.myForm textarea{
+  height: 150px;
+}
